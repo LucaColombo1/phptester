@@ -1,17 +1,1 @@
-version: '3.8'
 
-services:
-  db:
-    image: mysql:latest
-    container_name: mysql_container
-    environment:
-      MYSQL_ROOT_PASSWORD: password # Sostituisci con una password sicura
-      MYSQL_DATABASE: tabelline_db # Nome del database
-    ports:
-      - "3306:3306"
-    networks:
-      - mysql_network
-
-networks:
-  mysql_network:
-    driver: bridge
